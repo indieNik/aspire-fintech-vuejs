@@ -1,9 +1,14 @@
 <template>
-  <div id="nav">
+  <div class="hidden" id="nav">
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </div>
-  <router-view/>
+  <!-- <router-view/> -->
+  <div class="grid place-items-center h-screen text-green-500">
+    <h1 class="text-2xl">
+      Assignment completion in progress. Please wait..
+    </h1>
+  </div>
 </template>
 
 <style lang="scss">
