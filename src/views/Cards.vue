@@ -15,14 +15,15 @@
 
   <section class="tabs text-white md:text-gray-900">
     <!-- TBD: Toggle Style on click -->
-    <ul class="tab-header flex items-center space-x-6 text-sm mb-4 cursor-pointer">
-      <li class="pb-2 border-b-2 border-dark">My debit cards</li>
-      <li class="pb-2 text-gray-400 hover:text-gray-900">All company cards</li>
+    <ul class="tab-header flex items-center space-x-6 text-sm mb-4">
+      <li class="pb-2 border-b-2 border-dark cursor-pointer">My debit cards</li>
+      <li class="pb-2 text-gray-400 hover:text-gray-900 cursor-pointer">All company cards</li>
     </ul>
     <div class="tab-body md:bg-white md:p-10 md:border md:border-gray-100 rounded-lg shadow-lg mb-20">
-      <div class="grid md:grid-cols-2 gap-8">
+      <div class="grid md:grid-cols-2 items-start gap-8">
         <VisaCard name="Mark Henry" number="1234 1234 1234"/>
-        <Collapsible />
+        <Collapsible :config="{title: 'Card Details', dataItems: [], isCollapsed: true}" />
+        <Collapsible v-if="this.recentTransactions.length" :config="{title: 'Recent Transactions', dataItems: this.recentTransactions, isCollapsed: false}" />
       </div>
     </div>
   </section>
@@ -32,10 +33,26 @@
 
 import VisaCard from '@/components/VisaCard.vue'
 import Collapsible from '@/components/Collapsible.vue'
+import axios from "axios";
 
 export default {
   name: 'Cards',
   components: { VisaCard, Collapsible },
+  data() {
+    return {
+      recentTransactions: [],
+    }
+  },
+  mounted() {
+    this.getRecentTransactions();
+  },
+  methods: {
+    getRecentTransactions() {
+      axios.get('https://jsonplaceholder.typicode.com/users')
+        .then( res => { this.recentTransactions = res.data; console.log(res.data)})
+        .catch( err => console.error(err));
+    }
+  }
 }
 </script>
 

@@ -1,7 +1,7 @@
 <template>
   <div class="grid md:grid-cols-4 antialiased transition ease-linear duration-200">
     <Menubar />
-    <div class="content-view bg-secondary md:bg-white h-screen md:col-span-3 p-8 md:p-16 overflow-scroll">
+    <div class="content-view bg-secondary md:bg-white text-white md:text-secondary h-screen md:col-span-3 px-4 py-8 md:px-16 md:py-16 overflow-scroll">
       <router-view/>
     </div>
   </div>

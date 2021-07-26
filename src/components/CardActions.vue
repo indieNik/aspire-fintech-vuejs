@@ -1,8 +1,8 @@
 <template>
-  <div class="bg-light flex items-center justify-between p-6 rounded-xl">
+  <div class="bg-light flex items-center justify-between p-6 rounded-xl overflow-x-auto">
     <button class="flex flex-col justify-center items-center space-y-2">
       <img src="../assets/svg/Freeze-card.svg" alt="Freeze-card Icon" />
-      <span class="text-xs text-dark w-16 h-10">Free card</span>
+      <span class="text-xs text-dark w-16 h-10">Freeze card</span>
     </button>
     <button class="flex flex-col justify-center items-center space-y-2">
       <img src="../assets/svg/Set-spend-limit.svg" alt="Spend Icon" />
