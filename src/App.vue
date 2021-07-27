@@ -1,7 +1,10 @@
 <template>
   <div class="grid md:grid-cols-4 antialiased transition ease-linear duration-200">
     <Menubar />
-    <div class="content-view bg-secondary md:bg-white text-white md:text-secondary h-screen md:col-span-3 px-4 py-8 md:px-16 md:py-16 overflow-scroll">
+    <div class="content-view relative bg-secondary md:bg-white text-white md:text-secondary h-screen md:col-span-3 px-4 py-8 md:px-16 md:py-16 overflow-scroll">
+      <div class="logo flex items-center justify-end sm:hidden">
+        <img src="./assets/svg/Logo-Green-Mobile.svg" alt="Aspire Logo">
+      </div>
       <router-view/>
     </div>
   </div>
