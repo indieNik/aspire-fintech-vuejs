@@ -3,3 +3,21 @@
 @tailwind components;
 
 @tailwind utilities;
+
+@layer components{
+    .aspire-h1 {
+        @apply text-3xl font-bold;
+    }
+
+    .aspire-btn {
+        @apply md:bg-dark text-blue-300 md:text-white flex items-center p-2 space-x-2 rounded-md hover:bg-opacity-90;
+    }
+
+    .aspire-input {
+        @apply bg-white text-dark border shadow-lg p-2 rounded-md;
+    }
+
+    .aspire-card {
+        @apply bg-white border shadow-xl p-4 rounded-xl;
+    }
+}

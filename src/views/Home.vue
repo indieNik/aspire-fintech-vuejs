@@ -1,7 +1,7 @@
 <template>
   <div class="home mb-20">
     <section class="welcome">
-      <h1 class="text-2xl md:text-4xl font-bold mb-2">Welcome, Mark.</h1>
+      <h1 class="aspire-h1 mb-2">Welcome, Mark.</h1>
       <p class="text-sm tracking-widest">What would you like to get done today?</p>
     </section>
     <div class="grid md:grid-cols-2 md:gap-8">
