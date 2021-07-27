@@ -14,7 +14,7 @@
     }
 
     .aspire-input {
-        @apply bg-white text-dark border shadow-lg p-2 rounded-md;
+        @apply bg-white text-gray-700 border shadow-lg p-2 rounded-md;
     }
 
     .aspire-card {
