@@ -22,8 +22,23 @@
     <div class="tab-body md:bg-white md:p-10 md:border md:border-gray-100 rounded-lg shadow-lg mb-20">
       <div class="grid md:grid-cols-2 items-start gap-8">
         <VisaCard name="Mark Henry" number="1234 1234 1234"/>
-        <Collapsible :config="{title: 'Card Details', dataItems: [], isCollapsed: true}" />
-        <Collapsible v-if="this.recentTransactions.length" :config="{title: 'Recent Transactions', dataItems: this.recentTransactions, isCollapsed: false}" />
+        <Collapsible
+          :config="{
+            headerIcon: 'card-details', //icon name in SVG folder of Assets
+            title: 'Card Details',
+            dataItems: [],
+            isCollapsed: true
+          }"
+        />
+        <Collapsible
+          v-if="this.recentTransactions.length"
+          :config="{
+            headerIcon: 'transaction', //icon name in SVG folder of Assets
+            title: 'Recent Transactions',
+            dataItems: this.recentTransactions,
+            isCollapsed: false
+          }"
+        />
       </div>
     </div>
   </section>

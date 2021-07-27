@@ -32,7 +32,7 @@
   </aside>
   <!-- Mobile Menubar -->
   <aside class="fixed bottom-0 left-0 bg-white w-screen py-4 shadow-inner md:hidden z-10">
-    <div class="w-screen flex items-center justify-evenly">
+    <div class="w-screen flex items-center justify-between px-2">
       <router-link to="/" class="link flex flex-col items-center space-y-2">
         <img class="w-5 h-5 object-contain" src="../assets/svg/Logo-Mobile.svg" alt="Go to Home">
         <span class="text-xs">Home</span>
