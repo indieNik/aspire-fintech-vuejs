@@ -7,7 +7,7 @@
       </div>
       <div v-bind:class="{ 'rotate-180': !isCollapsed }" class="toggle transition transform"><img src="../assets/svg/down-arrow.svg" alt="Collapse this element"></div>
     </div>
-    <div v-if="!isCollapsed" class="collapsible-body bg-white text-secondary text-sm">
+    <div v-if="!isCollapsed" class="collapsible-body bg-white text-secondary text-sm max-h-96 overflow-y-auto">
       <div v-for="item in dataItems" :key="item.id" class="transaction pt-6 pb-4 rounded-sm border-b-2 border-gray-100 hover:bg-gray-50">
         <div class="transaction-header grid grid-cols-5 gap-2">
           <div class="icon col-span-1 bg-blue-100 grid place-items-center m-auto p-4 rounded-full">
